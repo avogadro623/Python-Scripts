@@ -1,0 +1,23 @@
+# Copyright 2014 Google Inc. All rights reserved.
+#
+#
+# Licensed under the Apache License, Version 2.0 (the "License"); you may not
+# use this file except in compliance with the License. You may obtain a copy of
+import googlemaps
+import csv
+tf= 'Python Sample\ZIP_CODES.txt'
+with open(tf) as csvfile:
+    readCSV = csv.reader(csvfile, delimiter=',')
+    zips = []
+    cities = []
+    states = []
+    for row in readCSV:
+        zip = row[0]
+        city = row[3]
+        state = row[4]
+    #    print(state)
+        if state == 'NJ':
+        	zips.append(zip)
+        	cities.append(city)
+        	states.append(state)
+    print(zips)
